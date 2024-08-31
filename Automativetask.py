@@ -16,6 +16,9 @@ if response.status_code == 200:
     
     # Find all <h2> tags with the class name 'news-title'
     news_titles = soup.select('h2', class_='span')
+
+    #Find all <a> tags with the class name 'btn'
+    Register_link = soup.find_all(name="a")
     
     # Loop through the titles and print them
     for title in news_titles:
